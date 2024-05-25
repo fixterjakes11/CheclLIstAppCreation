@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheclLIstAppCreation", "CheclLIstAppCreation\CheclLIstAppCreation.csproj", "{BD945C34-6203-47B7-9118-5F3281C02472}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD945C34-6203-47B7-9118-5F3281C02472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD945C34-6203-47B7-9118-5F3281C02472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD945C34-6203-47B7-9118-5F3281C02472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD945C34-6203-47B7-9118-5F3281C02472}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3DAF30D-9CAC-41D8-8AA7-DE82D3A0C8BB}
+	EndGlobalSection
+EndGlobal

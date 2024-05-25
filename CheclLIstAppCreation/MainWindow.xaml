@@ -1,0 +1,38 @@
+﻿<Window x:Class="CheclLIstAppCreation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CheclLIstAppCreation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Смена">
+                <StackPanel Margin="10">
+                    <ComboBox Name="EmployeeComboBox" DisplayMemberPath="FullName" SelectedValuePath="EmployeeID" Width="200" Margin="0,0,0,20"/>
+                    <Button Content="Закрыть смену" Width="150" Margin="0,0,0,10" Click="CloseShiftButton_Click"/>
+                    <Button Content="Открыть смену" Width="150" Margin="0,0,0,10" x:Name="OpenShiftButton" Click="OpenShiftButton_Click"/>
+                    <Button Content="Сформировать и распечатать чек-лист закрытия смены" Width="300" Margin="0,20,0,10" 
+                            x:Name="CreateCloseShiftCheckListDocument" Click="CreateCloseShiftCheckListDocument_Click"/>
+                    <Button Content="Сформировать и распечатать чек-лист открытия смены" Width="300" 
+                            x:Name="CreateOpenShiftChecklistDocument" Click="CreateOpenShiftChecklistDocument_Click"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Список чек-листов">
+                <Grid Margin="10">
+                    <DataGrid Name="ChecklistsDataGrid" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,0,0,50">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="*"/>
+                            <DataGridTextColumn Header="Дата создания" Binding="{Binding ChecklistDate}" Width="*"/>
+                            <DataGridTextColumn Header="Имя работника" Binding="{Binding Shift.Employee.FullName}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Распечатать выбранные чек-листы" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="200" Margin="0,0,0,10" 
+                            x:Name="PrintSelectedChecklistsButton"
+                            Click="PrintSelectedChecklistsButton_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
