@@ -20,9 +20,7 @@ using CheclLIstAppCreation.View;
 
 namespace CheclLIstAppCreation
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         private ChekListCreateContext _context;
@@ -70,7 +68,7 @@ namespace CheclLIstAppCreation
 
                 if (dialogResult == true)
                 {
-                    LoadChecklists(); // Reload checklists to show the newly created checklist
+                    LoadChecklists(); 
                 }
 
             }
@@ -105,7 +103,7 @@ namespace CheclLIstAppCreation
 
                 if (dialogResult == true)
                 {
-                    LoadChecklists(); // Reload checklists to show the newly created checklist
+                    LoadChecklists();
                 }
             }
             else
@@ -152,20 +150,22 @@ namespace CheclLIstAppCreation
             {
                 FontFamily = new System.Windows.Media.FontFamily("Times New Roman"),
                 FontSize = 14,
-                LineHeight = 21, // Line height is in pixels (1.5 * 14)
-                PageWidth = 793.7,  // Ширина A4 в пикселях (210 мм при 96 DPI)
-                PageHeight = 1122.5, // Высота A4 в пикселях (297 мм при 96 DPI)
-                PagePadding = new Thickness(56.7, 56.7, 28.35, 56.7) // Верх, низ, лево, право (2 см отступы)
+                LineHeight = 21, 
+                PageWidth = 793.7,  
+                PageHeight = 1122.5, 
+                PagePadding = new Thickness(56.7, 56.7, 28.35, 56.7) 
             };
 
             // Настройки для текста
             Style paragraphStyle = new Style(typeof(Paragraph))
             {
                 Setters =
-        {
-            new Setter(Paragraph.MarginProperty, new Thickness(0, 0, 0, 10)), // Отступы между параграфами
-            new Setter(Paragraph.TextAlignmentProperty, TextAlignment.Left) // Выравнивание текста по левому краю
-        }
+                {
+                    // Отступы между параграфами
+                    new Setter(Paragraph.MarginProperty, new Thickness(0, 0, 0, 10)), 
+                    // Выравнивание текста по левому краю
+                    new Setter(Paragraph.TextAlignmentProperty, TextAlignment.Left) 
+                }
             };
             doc.Resources.Add(typeof(Paragraph), paragraphStyle);
 
@@ -186,9 +186,9 @@ namespace CheclLIstAppCreation
 
             // Информация о работнике
             Paragraph employeeInfo = new Paragraph();
-            employeeInfo.Inlines.Add(new Bold(new Run("Имя работника: ______________\n"))); // Пустые данные для заполнения вручную
-            employeeInfo.Inlines.Add(new Bold(new Run("Дата: ______________\n"))); // Пустые данные для заполнения вручную
-            employeeInfo.Inlines.Add(new Bold(new Run("Должность: ______________\n"))); // Пустые данные для заполнения вручную
+            employeeInfo.Inlines.Add(new Bold(new Run("Имя работника: ______________\n"))); 
+            employeeInfo.Inlines.Add(new Bold(new Run("Дата: ______________\n"))); 
+            employeeInfo.Inlines.Add(new Bold(new Run("Должность: ______________\n")));
             doc.Blocks.Add(employeeInfo);
 
             // Таблица задач
@@ -249,7 +249,7 @@ namespace CheclLIstAppCreation
                 }
             }
 
-            taskTable.TextAlignment = TextAlignment.Left; // Выравнивание таблицы по левому краю
+            taskTable.TextAlignment = TextAlignment.Left;
             doc.Blocks.Add(taskTable);
 
             // Поля подписи
@@ -270,20 +270,20 @@ namespace CheclLIstAppCreation
             {
                 FontFamily = new System.Windows.Media.FontFamily("Times New Roman"),
                 FontSize = 14,
-                LineHeight = 21, // Line height is in pixels (1.5 * 14)
-                PageWidth = 793.7,  // Ширина A4 в пикселях (210 мм при 96 DPI)
-                PageHeight = 1122.5, // Высота A4 в пикселях (297 мм при 96 DPI)
-                PagePadding = new Thickness(56.7, 56.7, 28.35, 56.7) // Верх, низ, лево, право (2 см отступы)
+                LineHeight = 21,
+                PageWidth = 793.7,  
+                PageHeight = 1122.5,
+                PagePadding = new Thickness(56.7, 56.7, 28.35, 56.7) 
             };
 
             // Настройки для текста
             Style paragraphStyle = new Style(typeof(Paragraph))
             {
                 Setters =
-        {
-            new Setter(Paragraph.MarginProperty, new Thickness(0, 0, 0, 10)), // Отступы между параграфами
-            new Setter(Paragraph.TextAlignmentProperty, TextAlignment.Left) // Выравнивание текста по левому краю
-        }
+                {
+                    new Setter(Paragraph.MarginProperty, new Thickness(0, 0, 0, 10)),
+                    new Setter(Paragraph.TextAlignmentProperty, TextAlignment.Left) 
+                }
             };
             doc.Resources.Add(typeof(Paragraph), paragraphStyle);
 
@@ -304,9 +304,9 @@ namespace CheclLIstAppCreation
 
             // Информация о работнике
             Paragraph employeeInfo = new Paragraph();
-            employeeInfo.Inlines.Add(new Bold(new Run("Имя работника: ______________\n"))); // Пустые данные для заполнения вручную
-            employeeInfo.Inlines.Add(new Bold(new Run("Дата: ______________\n"))); // Пустые данные для заполнения вручную
-            employeeInfo.Inlines.Add(new Bold(new Run("Должность: ______________\n"))); // Пустые данные для заполнения вручную
+            employeeInfo.Inlines.Add(new Bold(new Run("Имя работника: ______________\n"))); 
+            employeeInfo.Inlines.Add(new Bold(new Run("Дата: ______________\n"))); 
+            employeeInfo.Inlines.Add(new Bold(new Run("Должность: ______________\n"))); 
             doc.Blocks.Add(employeeInfo);
 
             // Таблица задач
@@ -367,7 +367,7 @@ namespace CheclLIstAppCreation
                 }
             }
 
-            taskTable.TextAlignment = TextAlignment.Left; // Выравнивание таблицы по левому краю
+            taskTable.TextAlignment = TextAlignment.Left; 
             doc.Blocks.Add(taskTable);
 
             // Поля подписи
@@ -402,20 +402,20 @@ namespace CheclLIstAppCreation
             {
                 FontFamily = new System.Windows.Media.FontFamily("Times New Roman"),
                 FontSize = 14,
-                LineHeight = 21, // Line height is in pixels (1.5 * 14)
-                PageWidth = 793.7,  // Ширина A4 в пикселях (210 мм при 96 DPI)
-                PageHeight = 1122.5, // Высота A4 в пикселях (297 мм при 96 DPI)
-                PagePadding = new Thickness(56.7, 56.7, 28.35, 56.7) // Верх, низ, лево, право (2 см отступы)
+                LineHeight = 21, 
+                PageWidth = 793.7,  
+                PageHeight = 1122.5,
+                PagePadding = new Thickness(56.7, 56.7, 28.35, 56.7) 
             };
 
             // Настройки для текста
             Style paragraphStyle = new Style(typeof(Paragraph))
             {
                 Setters =
-        {
-            new Setter(Paragraph.MarginProperty, new Thickness(0, 0, 0, 10)), // Отступы между параграфами
-            new Setter(Paragraph.TextAlignmentProperty, TextAlignment.Left) // Выравнивание текста по левому краю
-        }
+                {
+                    new Setter(Paragraph.MarginProperty, new Thickness(0, 0, 0, 10)), 
+                    new Setter(Paragraph.TextAlignmentProperty, TextAlignment.Left) 
+                }
             };
             doc.Resources.Add(typeof(Paragraph), paragraphStyle);
 
@@ -493,7 +493,7 @@ namespace CheclLIstAppCreation
                 trg.Rows.Add(row);
             }
 
-            taskTable.TextAlignment = TextAlignment.Left; // Выравнивание таблицы по левому краю
+            taskTable.TextAlignment = TextAlignment.Left; 
             doc.Blocks.Add(taskTable);
 
             // Поля подписи
@@ -501,7 +501,7 @@ namespace CheclLIstAppCreation
             {
                 TextAlignment = TextAlignment.Left
             };
-            signature.Inlines.Add(new Bold(new Run("Подпись: ________________________________________\n")));
+            signature.Inlines.Add(new Bold(new Run("Подпись: ____________________\n")));
             signature.Inlines.Add(new Bold(new Run("Расшифровка подписи: ____________________________")));
             doc.Blocks.Add(signature);
 

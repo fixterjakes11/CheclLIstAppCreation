@@ -109,8 +109,8 @@ namespace CheclLIstAppCreation.Veiw
                     }
                     context.SaveChanges();
                     MessageBox.Show("Смена успешно закрыта.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
-                    this.DialogResult = true; // Установим результат диалога перед закрытием
-                    this.Close(); // Закрываем окно после успешного выполнения
+                    this.DialogResult = true; 
+                    this.Close(); 
                 }
                 else
                 {
