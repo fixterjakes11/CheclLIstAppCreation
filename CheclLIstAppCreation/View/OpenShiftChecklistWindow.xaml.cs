@@ -17,6 +17,14 @@ using static CheclLIstAppCreation.Veiw.CloseShiftChecklisWindow;
 
 namespace CheclLIstAppCreation.View
 {
+
+    public class TaskViewModel
+    {
+        public int TaskID { get; set; }
+        public string TaskDescription { get; set; }
+        public string Status { get; set; }
+    }
+
     /// <summary>
     /// Логика взаимодействия для OpenShiftChecklistWindow.xaml
     /// </summary>
@@ -25,12 +33,7 @@ namespace CheclLIstAppCreation.View
     /// </summary>
     public partial class OpenShiftChecklistWindow : Window
     {
-        public class TaskViewModel
-        {
-            public int TaskID { get; set; }
-            public string TaskDescription { get; set; }
-            public string Status { get; set; }
-        }
+
 
         private Employee _selectedEmployee;
         private ObservableCollection<TaskViewModel> _tasks;

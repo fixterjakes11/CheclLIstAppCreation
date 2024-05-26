@@ -18,18 +18,19 @@ using System.Windows.Shapes;
 
 namespace CheclLIstAppCreation.Veiw
 {
+
+    public class TaskViewModel
+    {
+        public int TaskID { get; set; }
+        public string TaskDescription { get; set; }
+        public string Status { get; set; }
+    }
+
     /// <summary>
     /// Логика взаимодействия для CloseShiftChecklistWindow.xaml
     /// </summary>
     public partial class CloseShiftChecklisWindow : Window
     {
-        public class TaskViewModel
-        {
-            public int TaskID { get; set; }
-            public string TaskDescription { get; set; }
-            public string Status { get; set; }
-        }
-
         private Employee _selectedEmployee;
         private Shift _shift;
         private ObservableCollection<TaskViewModel> _tasks;

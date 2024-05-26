@@ -28,7 +28,7 @@
                             <DataGridTextColumn Header="Имя работника" Binding="{Binding Shift.Employee.FullName}" Width="*"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button Content="Распечатать выбранные чек-листы" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="200" Margin="0,0,0,10" 
+                    <Button Content="Распечатать выбранный чек-лист" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="200" Margin="0,0,0,10" 
                             x:Name="PrintSelectedChecklistsButton"
                             Click="PrintSelectedChecklistsButton_Click"/>
                 </Grid>
